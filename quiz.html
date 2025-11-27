@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      background-color: antiquewhite;
+    }
+    h1 {
+      width: 80%;
+      margin: 50px auto;
+      background-color: rgb(243, 214, 176);
+      padding: 20px 40px;
+      border-radius: 14px;
+      color: brown;
+    }
+    .hero,
+    .btn {
+      width: 80%;
+      margin: 50px auto;
+      background-color: rgb(243, 214, 176);
+      padding: 40px 40px 10px;
+      border-radius: 14px;
+    }
+    .question {
+      font-size: 18px;
+      border: 1px solid brown;
+      padding: 40px;
+      margin-bottom: 30px;
+      border-radius: 14px;
+    }
+    p {
+      margin: 0 0 20px;
+    }
+    input[type="radio"] {
+      accent-color: brown;
+    }
+
+    label {
+      margin-right: 10px;
+    }
+    input {
+      margin: 0;
+    }
+    button {
+      width: 100%;
+      margin-bottom: 25px;
+      padding: 15px;
+      border-radius: 14px;
+      font-size: 20px;
+      letter-spacing: 1px;
+      border: 1px solid brown;
+      color: brown;
+    }
+    button:hover {
+      background-color: aliceblue;
+    }
+  </style>
+  <body>
+    <h1>QUESTIONS</h1>
+    <div class="hero">
+      <form>
+        <div class="question" data-correct="myVariable">
+          <p>
+            1. Which of the following is a valid variable name in most
+            programming languages?
+          </p>
+          <input
+            type="radio"
+            id="myVariable"
+            name="question1"
+            value="myVariable"
+          />
+          <label for="myVariable">myVariable</label>
+          <input
+            type="radio"
+            id="my-variable"
+            name="question1"
+            value="my-variable"
+          />
+          <label for="my-variable">my-variable</label
+          ><input
+            type="radio"
+            id="2nd_variable"
+            name="question1"
+            value="2nd_variable"
+          />
+          <label for="2nd_variable">2nd_variable</label
+          ><input
+            type="radio"
+            id="variable-"
+            name="question1"
+            value="variable-"
+          />
+          <label for="variable-">variable-</label>
+        </div>
+        <div class="question" data-correct="# This is a comment">
+          <p>
+            2. What is the correct syntax for a single-line comment in Python?
+          </p>
+          <input
+            type="radio"
+            id="q2opt1"
+            name="question2"
+            value="/* This is a comment */"
+          />
+          <label for="q2opt1">/* This is a comment */</label>
+          <input
+            type="radio"
+            id="q2opt2"
+            name="question2"
+            value="// This is a comment"
+          />
+          <label for="q2opt2">// This is a comment</label
+          ><input
+            type="radio"
+            id="q2opt3"
+            name="question2"
+            value="/* This is a comment */"
+          />
+          <label for="q2opt3">/* This is a comment */</label
+          ><input
+            type="radio"
+            id="q2opt4"
+            name="question2"
+            value="# This is a comment"
+          />
+          <label for="q2opt4"># This is a comment</label>
+        </div>
+        <div class="question" data-correct="11">
+          <p>
+            3. What will be the output of the given Python code: print(5 + 3 *
+            2)
+          </p>
+          <input type="radio" id="q3opt1" name="question3" value="16" />
+          <label for="q3opt1">16</label>
+          <input type="radio" id="q3opt2" name="question3" value="11" />
+          <label for="q3opt2">11</label
+          ><input type="radio" id="q3opt3" name="question3" value="10" />
+          <label for="q3opt3">10</label
+          ><input type="radio" id="q3opt4" name="question3" value="13" />
+          <label for="q3opt4">13</label>
+        </div>
+        <div
+          class="question"
+          data-correct="To iterate over a sequence (like a list or a string)"
+        >
+          <p>4. What is the purpose of a for loop in programming?</p>
+          <input
+            type="radio"
+            id="q4opt1"
+            name="question4"
+            value="To execute a block of code once if a condition is true"
+          />
+          <label for="q4opt1"
+            >To execute a block of code once if a condition is true</label
+          >
+          <input
+            type="radio"
+            id="q4opt2"
+            name="question4"
+            value="To iterate over a sequence (like a list or a string)"
+          />
+          <label for="q4opt2"
+            >To iterate over a sequence (like a list or a string)</label
+          ><br /><input
+            type="radio"
+            id="q4opt3"
+            name="question4"
+            value="To define a function"
+          />
+          <label for="q4opt3">To define a function</label
+          ><input
+            type="radio"
+            id="q4opt4"
+            name="question4"
+            value="To exit a loop prematurely"
+          />
+          <label for="q4opt4">To exit a loop prematurely</label>
+        </div>
+        <div class="question" data-correct="String">
+          <p>5. Which data type is used to store a sequence of characters?</p>
+          <input type="radio" id="q5opt1" name="question5" value="Integer" />
+          <label for="q5opt1">Integer</label>
+          <input type="radio" id="q5opt2" name="question5" value="Boolean" />
+          <label for="q5opt2">Boolean</label><br /><input
+            type="radio"
+            id="q5opt3"
+            name="question5"
+            value="String"
+          />
+          <label for="q5opt3">String</label
+          ><input type="radio" id="q5opt4" name="question5" value="Float" />
+          <label for="q5opt4">Float</label>
+        </div>
+      </form>
+    </div>
+    <div class="btn">
+      <a> <button onclick="checkTest()">Check Score</button> </a>
+    </div>
+    <script>
+      function checkTest() {
+        const questions = document.getElementsByClassName("question");
+        let score = 0;
+
+        for (let i = 0; i < questions.length; i++) {
+          let q = questions[i];
+          let correct = q.dataset.correct;
+          let selected = q.querySelector("input[type='radio']:checked");
+
+          if (selected && selected.value === correct) {
+            score++;
+            q.style.background = "#c8ffc8";
+          } else {
+            q.style.background = "#ffc8c8";
+          }
+        }
+
+        alert("Your score: " + score + " / " + questions.length);
+      }
+    </script>
+  </body>
+</html>
